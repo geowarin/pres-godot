@@ -49,7 +49,8 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 # What is Godot?
 
-Godot is a free and open‑source 2D and 3D game engine focused on developer ergonomics, a clean scene/node architecture, and a permissive MIT license.
+Godot is a free and open‑source 2D and 3D game engine focused on developer ergonomics, a clean scene/node architecture,
+and a permissive MIT license.
 
 - Cross‑platform editor and export: Windows, macOS, Linux, Web, Mobile, Console (via partners)
 - Languages: GDScript (Python‑like), C#, C++ via GDExtension, and visual scripting
@@ -90,7 +91,8 @@ image: https://docs.godotengine.org/en/stable/_images/nodes_and_scene_instances_
 
 - 100,000+ GitHub stars milestone reached [[1]](https://godotengine.org/article/beyond-100000-you-re-breathtaking/)
 - 2,800+ code contributors over the project’s lifetime [[2]](https://github.com/godotengine/godot/issues/100000)
-- Approx. 600 new pull requests and 600 new issues per month (sustained pace) [[1]](https://godotengine.org/article/beyond-100000-you-re-breathtaking/)
+- Approx. 600 new pull requests and 600 new issues per month (sustained
+  pace) [[1]](https://godotengine.org/article/beyond-100000-you-re-breathtaking/)
 
 <div class="mt-6 flex items-center justify-center gap-4">
   <img src="https://img.shields.io/github/stars/godotengine/godot?style=social" alt="GitHub stars badge" class="h-8" />
@@ -123,6 +125,7 @@ Notes:
 </v-clicks>
 
 References:
+
 - Engine overview: https://godotengine.org
 - Roadmap: https://godotengine.org/roadmap
 - Showcase: https://godotengine.org/showcase
@@ -139,6 +142,7 @@ References:
 - Cross‑platform exports without extra fees
 
 Resources:
+
 - Getting started: https://docs.godotengine.org/en/stable/getting_started/index.html
 - Tutorials: https://docs.godotengine.org/en/stable/tutorials/index.html
 - Asset Library: https://godotengine.org/asset-library
@@ -154,9 +158,24 @@ Resources:
 - Licensing clarity: permissive MIT license, no royalties
 
 Learn more:
+
 - License: https://godotengine.org/license
 - Source code: https://github.com/godotengine/godot
 - Contributing: https://docs.godotengine.org/en/stable/contributing/index.html
+
+---
+
+# The Godot Foundation
+
+- Independent non‑profit stewarding the Godot Engine and its ecosystem
+- Facilitates governance and roadmap; maintains infrastructure and releases
+- Manages the Godot Development Fund and sponsorships to finance core development
+- Supports maintainers, grants/bounties, community initiatives, and events
+- Handles trademarks and legal matters; promotes openness and transparency
+
+Links:
+- About/Governance: https://godotengine.org/about
+- Development Fund: https://fund.godotengine.org
 
 ---
 
@@ -168,12 +187,31 @@ Learn more:
 - Educational projects and teaching fundamentals
 
 Also capable:
+
 - Modern 3D with Vulkan, GI, NavigationServer, AnimationTree
 - Scripting choices: GDScript for speed, C# for ecosystem, GDExtension for native
 
 Docs:
+
 - 2D intro: https://docs.godotengine.org/en/stable/tutorials/2d
 - 3D intro: https://docs.godotengine.org/en/stable/tutorials/3d
+
+---
+
+# Jolt Physics
+
+- Modern, multi‑core rigid‑body physics engine (MIT‑licensed)
+- Proven in AAA titles such as Horizon Forbidden West and others
+- Benefits for devs: high performance, robust constraints, CCD, stable character controllers
+- In Godot: built-in since 4.4, previously as a plugin
+
+Refs: Horizon Forbidden West and Jolt
+overview [[1]](https://www.guerrilla-games.com/read/architecting-jolt-physics-for-horizon-forbidden-west),
+Projects using Jolt [[2]](https://jrouwe.github.io/JoltPhysics/md__docs_2_projects_using_jolt.html)
+
+<div class="mt-6 flex items-center justify-center">
+  <img src="https://upload.wikimedia.org/wikipedia/en/6/69/Horizon_Forbidden_West_cover_art.jpg" alt="Horizon Forbidden West cover art" class="h-72 rounded shadow" />
+</div>
 
 ---
 
@@ -185,6 +223,7 @@ Docs:
 - Community hubs: Q&A, forums, Discords, and regional groups
 
 Links:
+
 - Asset Library: https://godotengine.org/asset-library
 - GDExtension: https://docs.godotengine.org/en/stable/tutorials/scripting/gdextension/index.html
 - Q&A: https://godotengine.org/qa
@@ -200,6 +239,7 @@ Links:
 - When to pick others: C# for ecosystem/libraries; GDExtension (C/C++) for hotspots
 
 Quick taste:
+
 ```gdscript example.gd
 extends Node
 
@@ -210,6 +250,7 @@ func _process(delta: float) -> void:
 ```
 
 Learn more:
+
 - GDScript basics: https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/index.html
 - Static typing: https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/static_typing.html
 - Signals: https://docs.godotengine.org/en/stable/tutorials/scripting/signals.html
