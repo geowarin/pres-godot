@@ -1,7 +1,7 @@
 ---
 # You can also start simply with 'default'
 theme: seriph
-background: https://cover.sli.dev
+background: https://godotengine.org/assets/home/features/cross-platform.svg
 # some information about your slides (markdown enabled)
 title: Godot — the friendly open‑source game engine
 info: |
@@ -22,7 +22,7 @@ transition: slide-left
 
 # Godot
 
-Presentation slides for developers
+The friendly open‑source game engine
 
 <div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
   Press Space for next page <carbon:arrow-right />
@@ -37,10 +37,6 @@ Presentation slides for developers
   </a>
 </div>
 
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
-
 ---
 
 <Toc text-sm minDepth="1" maxDepth="2" />
@@ -50,32 +46,24 @@ The last comment block of each slide will be treated as slide notes. It will be 
 # What Godot is
 
 - A fully featured, free, open‑source 2D/3D game engine with an all‑in‑one lightweight editor.
-- Broad platform support for development and deployment: Windows, macOS, Linux, Android, iOS, Web, XR (Quest/Horizon OS), and consoles (Switch, Xbox, PS5).
-- Architecture: user‑facing “scenes and nodes” on top of high‑performance “servers” (data‑oriented systems for rendering, physics, etc.).
-- Scripting: GDScript (tight integration), C# (high performance but historically less tightly integrated), and GDExtension bindings for many languages (C++, Rust, Go, Python, JavaScript).
-- Notable tech: Jolt Physics integrated in 4.4; flexible modern rendering (forward+ hybrid, real‑time GI, scalable low‑end renderer); strong i18n including full RTL support.
-
----
-
-# What is Godot?
-
-Godot is a free and open‑source 2D and 3D game engine focused on developer ergonomics, a clean scene/node architecture,
-and a permissive MIT license.
-
-- Cross‑platform editor and export: Windows, macOS, Linux, Web, Mobile, Console (via partners)
-- Languages: GDScript (Python‑like), C#, C++ via GDExtension, and more
-- Batteries included: physics, animation, tilemaps, UI, audio, navigation, shaders, and more
-- No royalties, no mandatory accounts, no online check‑ins
+- Broad platform support for development and deployment: Windows, macOS, Linux, Android, iOS, Web, XR (Quest/Horizon
+  OS), and consoles (Switch, Xbox, PS5).
+- Architecture: user‑facing “scenes and nodes” on top of high‑performance “servers” (data‑oriented systems for
+  rendering, physics, etc.).
+- Scripting: GDScript (tight integration), C# (high performance but historically less tightly integrated), and
+  GDExtension bindings for many languages (C++, Rust, Go, Python, JavaScript).
+- Notable tech: Jolt Physics integrated in 4.4; flexible modern rendering (forward+ hybrid, real‑time GI, scalable
+  low‑end renderer); strong i18n including full RTL support.
 
 <div class="flex justify-center">
-  <img src="https://godotengine.org/assets/showcase/until-then-2.webp" alt="Godot editor screenshot" class="h-48 w-96 object-cover rounded" />
+  <img src="https://godotengine.org/assets/press/logo_large_color_dark.png" alt="Godot editor screenshot" class="h-40 object-cover rounded" />
 </div>
 
 ---
 
 # Godot unfair advantages
 
-- Very light: 120Mb
+- Very light: 120Mbc
     - Unreal: 35Gb
     - Unity: 10Gb + Launcher + mandatory account
 - Free forever
@@ -162,9 +150,11 @@ Notes:
 
 # Adoption and momentum
 
-- Rapid growth over the last few years (e.g., strong increase in Steam releases; high community traction among indie and young developers).
+- Rapid growth over the last few years (e.g., strong increase in Steam releases; high community traction among indie and
+  young developers).
 - Now appearing in industry surveys; projected significant growth this decade.
-- Revenue traction: rising number of Godot games exceeding $1M; cumulative revenues moving toward the nine‑figure range with strong year‑over‑year growth.
+- Revenue traction: rising number of Godot games exceeding $1M; cumulative revenues moving toward the nine‑figure range
+  with strong year‑over‑year growth.
 - Signals of industry trust: established studios migrating projects and catalogs to Godot.
 
 References:
@@ -192,35 +182,68 @@ image: /growth.png
 
 # Godot adoption: Game jams
 
-<div class="mt-6 flex gap-4">
-  <img src="/gmtk/2025.png" class="w-50%" />
+<div class="mt-6 flex gap-4 grow-0">
+    <img src="/gmtk/2025.png" class="w-1/2 h-100%" />
+    <div class="flex flex-col gap-4 overflow-auto w-1/2 max-h-[30vh]">
+        <img src="/gmtk/2021.png" />
+        <img src="/gmtk/2022.png" />
+        <img src="/gmtk/2023.png" />
+        <img src="/gmtk/2024.png" />
+    </div>
 </div>
 
 ---
 
 # Godot adoption: Influencers
 
-- Brackeys
-- Passivestar
-- Acerola
+<div class="flex flex-col gap-4 float-right w-50%">
+  <img src="/influencers/brackeys.png" />
+  <img src="/influencers/acerola.png" />
+</div>
 
+- [Brackeys](https://www.youtube.com/@Brackeys)
+- [Passivestar](https://bsky.app/profile/passivestar.bsky.social)
+- [Acerola](https://www.youtube.com/@Acerola_t)
+- [Kenney](https://kenney.nl/)
+
+https://passivestar.xyz/posts/is-it-time-to-use-godot/
+
+---
+
+# Godot adoption: indie studios
+
+- [Mega crit](https://www.pcgamer.com/games/card-games/slay-the-spire-2-ditched-unity-for-open-source-engine-godot-after-2-years-of-development/) (
+  Slay the Spire)
+- [Road to Vostok](https://www.nme.com/news/road-to-vostok-is-moving-away-from-unity-3506735)
+- [Robot Gentlemen](https://robotgentleman.com/)
+- [Frog Collective](https://frog-collective.com/)
+
+https://gamefromscratch.com/developer-experiences-moving-to-godot-from-unity/
+
+---
+layout: iframe-right
+url: https://bsky.app/profile/wethrowswitches.bsky.social/post/3lx7orjamss2i
 ---
 
 # Godot adoption: Commercial successes
 
-- "Brotato" - top-selling roguelike
-- "Cassette Beasts" - monster-collecting RPG
-- "Cruelty Squad" - cult hit FPS
+- Brotato - top-selling roguelike
+- Cassette Beasts - monster-collecting RPG
+- Cruelty Squad - cult hit FPS
+- The Case of the Golden Idol - Investigation game
+- Halls of Torment - Survivor roguelite
 
-https://godotengine.org/article/godot-showcase-dogwalk/
+https://godotengine.org/showcase/
 
 ---
 
 # Why developers prefer Godot
 
 - Usability and rapid iteration: integrated debugger, hot‑editing via remote scene tree, very fast run/test cycles.
-- Freedom and ownership: open license, no vendor lock‑in, modify the engine as needed; ability to upstream changes to reduce long‑term maintenance.
-- Cost control: no licensing fees; pay only for optional services (support, ports, tooling) from multiple competing providers.
+- Freedom and ownership: open license, no vendor lock‑in, modify the engine as needed; ability to upstream changes to
+  reduce long‑term maintenance.
+- Cost control: no licensing fees; pay only for optional services (support, ports, tooling) from multiple competing
+  providers.
 
 Resources:
 
@@ -319,13 +342,13 @@ Learn more:
 
 ---
 
-# Demo: Creating a bouncing ball 
+# Demo: Creating a bouncing ball
 
 ![ball scene](/demo/ball_scene.png)
 
 - Root is a [RigidBody3D](https://docs.godotengine.org/en/stable/classes/class_rigidbody3d.html)
-  - Contains a [MeshInstance3D](https://docs.godotengine.org/en/stable/classes/class_meshinstance3d.html)
-  - Contains a [CollisionShape3D](https://docs.godotengine.org/en/stable/classes/class_collisionshape3d.html)
+    - Contains a [MeshInstance3D](https://docs.godotengine.org/en/stable/classes/class_meshinstance3d.html)
+    - Contains a [CollisionShape3D](https://docs.godotengine.org/en/stable/classes/class_collisionshape3d.html)
 
 - Make it a scene
 - Add a lot of balls!
@@ -391,6 +414,7 @@ func add_ball():
 <kbd>Debug</kbd> > <kbd>Customize run instances</kbd>
 
 Main run args:
+
 ```
 --path ../demo --editor
 ```
@@ -402,11 +426,16 @@ Main run args:
 # Future
 
 - 4.5 release
-  - shader baker
-  - SDL 3 gamepad support
-  - 
+    - shader baker
+    - SDL 3 gamepad support
+    - Embedded preview enhancements (Mute, multi-selection, macos support)
+    - Screen reader support
+    - Abstract classes
+      https://godotengine.github.io/godot-interactive-changelog/#4.5
 
-https://godotengine.github.io/godot-interactive-changelog/#4.5
+Store:
+https://store-beta.godotengine.org/
+
 
 --- 
 
