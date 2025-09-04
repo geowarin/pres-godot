@@ -344,6 +344,8 @@ Learn more:
 
 # Demo: Creating a bouncing ball
 
+- Floor is a [CSGShape3D](https://docs.godotengine.org/en/stable/tutorials/3d/csg_tools.html)
+
 ![ball scene](/demo/ball_scene.png)
 
 - Root is a [RigidBody3D](https://docs.godotengine.org/en/stable/classes/class_rigidbody3d.html)
