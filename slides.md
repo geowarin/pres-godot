@@ -136,7 +136,7 @@ url: https://docs.godotengine.org/en/stable/contributing/development/best_practi
 
 ---
 layout: image-right
-image: /img/PRs.png
+image: /PRs.png
 ---
 
 # Godot popularity — by the numbers
@@ -405,6 +405,8 @@ Main run args:
   - shader baker
   - SDL 3 gamepad support
   - 
+
+https://godotengine.github.io/godot-interactive-changelog/#4.5
 
 --- 
 
