@@ -32,7 +32,7 @@ Presentation slides for developers
   <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="slidev-icon-btn">
     <carbon:edit />
   </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" class="slidev-icon-btn">
+  <a href="https://github.com/geowarin/pres-godot" target="_blank" class="slidev-icon-btn">
     <carbon:logo-github />
   </a>
 </div>
@@ -44,30 +44,6 @@ The last comment block of each slide will be treated as slide notes. It will be 
 ---
 
 <Toc text-sm minDepth="1" maxDepth="2" />
-
----
-
-# Code
-
-Use code snippets and get the highlighting directly, and even types hover!
-
-```gdscript [example.gd] {all|1|2}
-extends Node
-class_name Example
-
-func _ready() -> void:
-    pass
-```
-
-<!--
-Notes can also sync with clicks
-
-[click] This will be highlighted after the first click
-
-[click] Highlighted with `count = ref(0)`
-
-[click:3] Last click (skip two clicks)
--->
 
 ---
 
@@ -91,10 +67,41 @@ Docs: https://docs.godotengine.org
 
 </v-click>
 
+---
+layout: image-right
+image: https://docs.godotengine.org/en/stable/_images/nodes_and_scene_instances_player_scene_example.webp
+---
+
+# The Scene Tree
+
+- Core concept: games are built from scenes composed of nodes arranged in a tree.
+- Each node provides a focused responsibility (e.g., Sprite2D, Area3D, AnimationPlayer).
+- Inheritance by composition: reuse via instancing scenes as children of others.
+- Signals enable decoupled communication between nodes (event-driven).
+- Editing workflow: drag-and-drop nodes, set properties, connect signals, and instance scenes.
+- Benefits:
+    - Modular, maintainable architecture
+    - Easy reuse and composition
+    - Clear separation of concerns
+
+---
+
+# Godot popularity — by the numbers
+
+- 100,000+ GitHub stars milestone reached [[1]](https://godotengine.org/article/beyond-100000-you-re-breathtaking/)
+- 2,800+ code contributors over the project’s lifetime [[2]](https://github.com/godotengine/godot/issues/100000)
+- Approx. 600 new pull requests and 600 new issues per month (sustained pace) [[1]](https://godotengine.org/article/beyond-100000-you-re-breathtaking/)
+
+<div class="mt-6 flex items-center justify-center gap-4">
+  <img src="https://img.shields.io/github/stars/godotengine/godot?style=social" alt="GitHub stars badge" class="h-8" />
+  <img src="https://img.shields.io/github/contributors/godotengine/godot" alt="Contributors badge" class="h-8" />
+  <img src="https://img.shields.io/github/issues-pr-closed/godotengine/godot?label=PRs%20closed" alt="Closed PRs badge" class="h-8" />
+</div>
+
 <!--
 Notes:
-- Emphasize “scene as a tree of nodes” mental model.
-- Mention clean project structure and lightweight installs.
+- Stars indicate community traction; badges auto-update.
+- The ~600 PRs/month figure shows sustained contributor activity.
 -->
 
 ---
@@ -181,6 +188,32 @@ Links:
 - Asset Library: https://godotengine.org/asset-library
 - GDExtension: https://docs.godotengine.org/en/stable/tutorials/scripting/gdextension/index.html
 - Q&A: https://godotengine.org/qa
+
+---
+
+# GDScript at a glance
+
+- Purpose‑built, Python‑like language designed for Godot’s node/scene model
+- Optional static typing for better tooling and performance
+- Tight engine integration: signals, coroutines (await), resources, editor hints
+- Fast iteration: hot‑reload, live inspector, autocompletion
+- When to pick others: C# for ecosystem/libraries; GDExtension (C/C++) for hotspots
+
+Quick taste:
+```gdscript example.gd
+extends Node
+
+var speed: float = 200.0
+
+func _process(delta: float) -> void:
+    position.x += speed * delta
+```
+
+Learn more:
+- GDScript basics: https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/index.html
+- Static typing: https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/static_typing.html
+- Signals: https://docs.godotengine.org/en/stable/tutorials/scripting/signals.html
+- Coroutines (await): https://docs.godotengine.org/en/stable/tutorials/scripting/coroutines.html
 
 ---
 
