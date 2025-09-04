@@ -1,0 +1,338 @@
+[Music] Hello everyone. Uh we're going to get started right away here. So just need to do a little bit of bookkeeping.
+Uh first of all, please turn off your phones or silence them or or whatever uh so that we don't have any phones going
+off in uh in the middle of the talk. Uh we are recording so nice to keep things clean. Um, with that out of the way, uh,
+I'm Klay John. I'm a technical director at W4 Games. I'm also a longtime uh, GDO contributor, uh, and have a great love
+for for the engine. Uh, I'm joined here by my friend Nicola, uh, who is a co-CEO of W4 Game. and we're here to talk a
+little bit about GDAU W4 Games and and what we're doing to enhance the ecosystem for uh for larger projects and uh to
+ensure that people working in the GDO ecosystem are ultimately successful with uh with the things they're working on.
+So, uh first off, I'm going to talk a little bit about what what GDAU is. Hopefully, if you're coming to this talk, you
+already know a little bit about GDAU, but I'm going to give a broad coverage anyway just to uh go over um all kinds of
+things about the engine on a on a more technical side. Uh and then I'm going to talk a little bit about why developers
+prefer GDAU. Uh, and so, you know, we've had the amazing opportunity over the last few years to hear from folks who have
+moved to GDAU, either from other technologies or from other industries and are just, you know, using it as their first
+game engine or who are moving from custom tech to to GDO. Uh, and so I'm going to talk a little bit about what we hear
+from those people and then what we what we suspect from from our side. Then I'm going to hand things over to Nola who's
+going to talk a little bit about the state of GDO adoption. There's some really fun numbers in there. So, uh, you know,
+unless you've been tracking those numbers yourself, I think there's going to be some surprises in there that are going
+to, uh, to make you all very happy. And then talk about some success stories. So, some some projects made in GDO that
+that have been successful, um, or going to be successful. Um, and then I'll talk a little bit about how W4 games can
+help you and how we empower success in the ecosystem. So, first of all, what is GDO? Again, I hope you know the answer
+to that, but if you don't, it's a 2D and 3D game engine. Um, it's fully featured. It's very powerful and it provides
+everything out of the box. So, you have one executable. Uh, you load it up and it's got all the tools you need to to
+make a game. So, that includes a script editor. It includes all kinds of tools for authoring your game content. And what
+sets GDAU apart a little bit in the ecosystem right now is that it does have all that all-in-one kind of tool nature to
+it, but it's also free and open- source and is developed by a community of people that just love the engine. They love
+making games and they want to share that technology with everybody else. Uh and so importantly what that means is GDO is
+free and it'll always be free because the people who are making it don't don't have an incentive to to charge you
+anything right uh ultimately the people who who are making it only incentive is to continue making it because they're
+using it and they want you to use it and and that's one of the things that makes GDAU so amazing and it makes it so much
+fun to to be a part of that ecosystem. You know, I've been contributing to GDO myself for over eight years now, and I
+don't see any reason that I would stop anytime soon because it's just super fun and and rewarding, and that's how how
+all of us contributors feel. Now, on a more technical side, I said that, you know, GDO is an uh includes all of the
+tools out of the box. So, so what does that mean? Well, very importantly, we care about multiplatform support. So, GDO
+supports a lot of platforms out of the box. Windows, Mac OS, Linux, Android, iOS, web, Horizon, Horizon OS, that's the
+Quest devices, so XR support, uh, and consoles, Switch, Xbox, and PlayStation 5. Um, so when you make your game with
+GDAU, you develop on whatever platform you're using, uh, and then you have support for all of these different places out
+of the box. And and importantly because the way GDO is designed, the GDO editor also runs on most of these uh platforms,
+not quite all of them, but Windows, Mac, Linux, Android, web, Horizon, and Horizon OS. Um, and you can develop your
+games from those platforms for those platforms and and others. Uh, it includes a full full editor and nicely the editor
+is very small. It's lightweight. It's a single file. You download the file, you click on it, it runs. There's no
+installation. The download is very quick even on limited bandwidth. Uh and you're just up up and running really uh
+really fast. Uh it also supports a lot more advanced features, things like navigation with dynamic obstacle avoidance,
+networking. It supports a four few levels of of networking. Depending on what you're familiar with, you might choose to
+uh drop right down to TCP, UDP, HTTP, or you might just work with with websockets or something something more high high
+level like that. Um, one thing that I'm personally really excited about and that really sets GDAU apart is the full
+internationalization support. So, if you use the editor, you can see we support a ton of different languages out of the
+box and those are all community translations. there's a huge community of translators working on weblate uh in order to
+translate everything in in the engine. But even more importantly, GDAU is the only engine with full right to left
+language support. Uh, and so that's extremely important for languages like Arabic and Hebrew where when you use them
+from a from a traditional engine, you just can't use your own language, you know, and and I think for a lot of us that's
+something that's hard to understand because we just open up a computer and everything's in our language and we type it.
+It's in our language. But um, for a lot of developers, they go and they try to put they paste text for example into a
+text box and it just doesn't work. uh and in GDO we have full support for that broad range of languages and it's
+something we pride ourselves on. Now in terms of architecture from a from a user perspective uh we expose what we call
+scenes and nodes. So you know a scene is everything that is you know going on in your game at a given time and nodes are
+the things that you compose uh compose scenes out of and so you you do that in a bit of a tree treelike structure. So
+you can see on on the right here uh you have a root node, you have children nodes, and those kind of nest down uh within
+each other. And if you're somebody who's uh used a few engines, or somebody who's a bit more technical, you might think,
+okay, that sounds great. Uh that seems easy to use, but computers don't think like that. Computers don't like that sort
+of structure. Isn't this going to be horribly slow? Uh and the answer is yes. If the entire engine was designed like
+this, it would be horribly slow. and it would be very hard to make games. Um, but GDAU is built on top of what we call
+servers. So servers are are modules within the engine that handle uh behavior for certain areas. So rendering or physics
+um they all live in servers and servers use data oriented design uh infrastructure in order to be very fast. Uh and so
+when you are making things with with nodes and scenes uh internally uh GDO is just working with raw data uh and it's
+able to process that data really quickly and do all of the heavy lifting really quickly. Uh and then you're able to
+think in this paradigm of scenes and nodes. If you haven't used GDO, you're probably thinking why does this guy keep
+saying scenes and nodes? That makes no sense. you really need to try it because this this architecture makes it so easy
+to reason about different things in your game. It makes it really easy to compose different behaviors in your game and
+then you just don't have to think about it and importantly you don't have to think about performance. Uh you get this
+really really nice way of of having things exposed while the performance concerns are tucked away uh you know under the
+under the table. Uh, another major component of making games is scripting of course and we support a variety of
+scripting languages. Uh, our favorite of course is GDScript. Uh, it's a language that we created specifically for GDAU.
+That means it has a really tight integration with the engine. Uh, and importantly, it's designed for making games,
+right? This isn't a language that's designed for a hundred different tasks and uh, you happen to be making games with
+it. It's a it's a language made by people who make games for people who make games. Um, now importantly, uh, it's not as
+fast as other languages. Um, you'll hear us say a lot, well that's not super important because a lot of times your
+scripts are just doing simple things. You're calling into the engine, doing things in the engine, and the engine does
+the hard stuff. But, uh, sometimes you want to do things more advanced. Sometimes you're going to do heavy procedural
+generation or something like that. uh and when you're going to do that uh there are times where you'll run into
+bottlenecks with GDScripts. So what do we do? Well, we expose other languages. One of those is C. C is also tightly
+tightly coupled with the engine. You download the C build of the engine and you can just use it out of the box. Uh we
+support so if you like to be on bleeding edge, you're welcome. Uh we're there. Um and C is just a very important
+language in the ecosystem. A lot of devs are more familiar with it, more comfortable working with it. Very high
+performance, very easy to use, but it does come with some drawbacks, especially in GDAU where it's not as tightly
+coupled to the engine as GDScript. And then of course we have GD extension which for a lot of you might seem like this
+magic voodoo phrase that you keep hearing repeated in dark corners of the GDO forums. But GD extension really is just a
+way of binding other languages to GDO. And then then you can interface with the engine the same way you do with with
+GDScript and C. And importantly it means that you can basically use any language as long as there's community binding.
+So C++, Rust, Go, Python, JavaScript. Uh, and you can get uh whatever kind of trade-off you want. If you want a really
+easy language and you're used to Python, then you can use Python for your game. If you want like absolute max
+performance, uh, then you can use C++ or Rust or C C directly. And those are all options that uh that you have. Now, in
+terms of physics, recently we just added Jolt physics into the core of the engine in GDO 4.4, which we released this
+month. [Applause] We're just as excited as you. Uh, Jolt Physics is amazing. It's the sort of project that we've been
+waiting for because designing and maintaining a physics engine is just as much work as designing and maintaining a game
+engine. uh and it requires a lot of specialized knowledge and Jolt is open- source. It's incredible. It's used in
+Horizon Forbidden West. It's, you know, it's proven in the industry. Uh and the maintainer is just an incredible person.
+And so we have or we originally uh exposed it as an extension uh and now it's built right into the engine. So you can
+you can enable it out of the box and it's it's really really quite good. and we're we're very lucky to be able to use
+it. Uh 3D rendering, uh another important area of the engine that we get asked about a lot. Um technically we support
+what's called a a clustered forward uh renderer. It's technically a hybrid clustered forward renderer. Um we support
+things like real-time GI. Uh it's a fairly modern renderer. It's not Unreal Engine. It's not the most modern thing in
+the world, but it it takes advantage of a lot of modern techniques uh in order to be quite fast and quite flexible and
+most importantly for us is that uh there's no uh nothing carries over into user space where you have to worry about the
+renderer, right? You you make your game and it just it just works and you can use whichever renderer you want and it's
+just going to work. And we offer other renderers like a scalable low-end renderer that you can use for mobile devices
+and for web and things like that. But you you can prototype your game in the the compatibility renderer and then decide,
+you know what, I don't need to target web. So let's bump up the graphics. We'll switch to the forward plus renderer.
+We're going to turn on dynamic GI and and all the other effects. And and you can do that seamlessly. Um and finally,
+importantly, our our renderers also work well on XR devices. Uh, so very easy to make your game on desktop for for XR
+devices and and trust that it's going to run run well. Um, so I want to talk a little bit about why developers prefer
+GDAU and there's a few reasons and I've tried to uh highlight them here. Um, so one is the usability. Uh, an important
+part of GDAU I'm going to go into more detail about this later. Uh, an important part of GDO is it's really easy to use,
+but it's also ergonomic. So, ease of use isn't just about learning something and then being able to use it quickly. It's
+also about having fun using it and not feeling like you're constantly fighting your tools. And so, one of the things
+that GDAU really promotes is a tight feedback cycle where you're testing, you're running your game, making changes,
+testing again, and that's really quick. Launching your game from the editor, super quick. closing the editor, coming
+back in the editor, super quick. Making changes while your game is running, it works out of the box. And that's really
+really important to the the dynamic of GDAU and it's something that we hear a lot of feedback about from people who have
+moved to GDO from other uh other engines. Another one, a fun point is uh using GDAU, you derisk your company from a
+single proprietary vendor. So that is part of being open- source. Um, but of course like there are things that you need
+that aren't provided by an open- source project. And the nice thing about GDO is those things are provided by uh third
+parties who are in competition with each other to provide the best value for the services that they provide and for for
+the money that that you spend. There isn't a single monolithic entity that controls the prices and controls the deal,
+right? You can always have have options. Uh, another one maybe too obvious, but there's no licensing costs with with
+GDAU. Um, and finally, the freedom of license means that you don't have to just use GDAU the way that it was intended to
+be used. You can take the source of GDO, do whatever you want with it. If you have technical people on your team, uh
+it's actually surprisingly easy to change GDAU, either cut out features you don't want, add features you need, or even
+just streamline features so that uh certain things are faster because you you don't need certain uh certain edge cases,
+for example. Let's talk a little bit more about usability. So, as I was mentioning before, GDO is an all-in-one package,
+which means that you're not downloading, installing a bunch of things and maintaining different dependencies between
+different pieces of software. You just know that when you download it, you have everything you need and you can work.
+Uh, and for a lot of people, myself included, that is extremely attractive because I want to focus on what I'm working
+on. I don't want to focus on, okay, what version of this is doing this and how is this interacting with this? I just
+want to know that I can dive into whatever I'm I'm doing and and that's something we hear from uh from a lot of people.
+Um talking about fast integrate iteration, my apologies. Um talking about fast iteration, we also have an integrated
+debugger which means that when you run into an issue in your script, uh the engine notifies you of that right there in
+the editor and you get that really nice feedback where okay, this line has this problem and it happened when I was at
+this point in the game. Um, and that allows you to really quickly iterate because you go directly to where the problem
+is, you fix it, you run again, and everything is is working. We also have a remote scene tree, which means you can make
+modifications to the end to the game while it's running and see those changes reflected in the running game. And
+importantly, that scales to all of the the potential test devices you can be using. If you're testing on a console, it's
+the same deal. If you're testing on mobile, it's the same deal. You plug in your device and you have that nice feedback
+iteration. You have the debugger, you have remote scene tree and everything. And so that makes it really really nice to
+to iterate on um on what you're working on. Second is freedom. So I wanted to go a bit more detail into how important it
+is to own your entire tech stack. Uh for most users, uh this is more of a theoretical concern. You can be comfortable
+that the deal is not going to change on you. Um, nothing's going to uh impact whether or not you can actually ship your
+game. If GDO is working for you when you start production, it's going to continue working for you until you're done
+production. If the whole GDO project disappears and nobody contributes to it anymore, the worst case scenario is GDAU
+doesn't continue to get better, but it's not going to get worse. Um, and and that's really really important. But if you
+do have resources uh or you do have technical people, you also have complete freedom to do whatever you want with the
+engine, which means you can rip out the render and write your own render if that's something that your team's doing. Or
+if you're making a game that is heavily heavily dependent on a certain type of physics interaction a and your team has
+expertise in physics interaction and you don't want to write a renderer. You don't want to write an audio system. You
+don't want to write navigation. You can just focus on where your team's expertise is. Modify the engine as much as you
+want and then know that you own everything, right? You're you're not owning just one component of your game. you own the
+whole thing. Uh but what you have brought is that that one uh that one component and and we're seeing a lot of teams
+especially teams with resources that this is a major major selling point for them. And to me it makes makes total sense.
+Finally, uh technology costs. Like I said before, this one's a little bit little bit obvious. You know, it's free. So
+that's great. It's free and we all want to use the freest tool available. But good is more than than just free, right?
+Because making a game just isn't just about the licensing costs. You know, there's support costs when you need when you
+need more advanced uh support. There's cost for uh other services in the ecosystem. If you need somebody to port your
+game, if you need um modifications to the engine, for example. Uh all of those things are costs that you may or may not
+run into. And the nice thing about GDAU is you you can choose the amount of cost you incur, right? You're not fixed into
+one deal which is, you know, you're paying this every year, you're paying this every month, or you're paying this amount
+of revenue share. You start from zero and then you really get to pick and choose what you want. So, if you want advanced
+uh premium support, you you can pay for that and you're going to have options for who you can pay for that uh and then
+really tailor what you need to what you want to pay for uh and and what's valuable to you. Now, if you are making a
+version of the engine or you're making modifications, you also have the option to upstream the changes that you make.
+Now, if you've never forked an open source project and you haven't worked much in open source, that might not seem like
+a huge value and that might not seem like a cost-saving measure. If I'm giving you my code, how is that saving me money?
+But if you have maintained an open source project and you have maintained a fork, you know that actually If I give you
+the code, it saves me a lot of money. Uh, and that's just because GDO develops so fast, right? So, if I make a modified
+version of GDAU, uh, and I, you know, I focus on what I want and I blink and I look back, all of a sudden I'm out of
+date and GDO has gone light years ahead of me because GDO gets developed so fast because there's so many people working
+on it. And then I have to go and somehow take all those changes back, merge them into the work I'm doing and make sure
+that all the changes I made continue to work with those new changes. And there's no guarantee they do, right? Uh and
+that can become very painful and very expensive very fast. Uh and so if you're able to take modification, maybe it makes
+the engine faster, maybe it adds a new feature, and you're able to bring that upstream, then you don't have to maintain
+that anymore. I mean, ideally, you would still maintain it upstream for the benefit of everybody, but you don't have to
+worry about pulling back all the other changes. All of that just gets simplified and it benefits everybody. And I think
+for me, that's part of the core of what makes GDO so great is everybody is incentivized to do something that benefits
+everybody else, right? The best thing for you is also the best thing for for everybody. And I think at the core that
+that feedback loop and that cycle is what makes uh makes GDAU able to to grow to where it is today. All right, so I'm
+going to hand things over to Nicola who's going to talk a little bit about GDO adoption and a little bit about um some
+successes in GDO. Thank you. [Applause] Hi everyone. Uh my name is Nicola. The blue robot is here. So we can we can
+continue I guess. Thanks Clay for a great um address to the technical part. I have a slightly different background. So
+uh I'm a co-founder and co-co. I serve as a co-CEO of W4 games which is a company uh supporting the god journey and the
+god of growth. And what I'll try to add in terms of contribution to this talk today is a little bit of market context,
+right? Which is a market context in which we operate and why is this an exciting time to look at it and to think about
+GDO? First of all, I think that one of the reason why thousands of people are excited about gaming and GDC is so
+disruptive in as as one of the key events in the industry is because gaming is worth 25% of software and that is huge in
+this context here. Godo is one of the fastest gaming technologies and there are really interesting data to back this. As
+you can see in the last three years, Godo has been growing much faster than big companies like Unity and Unreal for
+example. And this growth is mainly due to the fact that there is a huge community and there are compelling features
+behind that. The growth is at least 50% yearover-year and I'm talking about as a proxy as a data point number of games
+published on Steam. Just just look at that for a second. Why is God good growing in that trend? Well, some key drivers
+that we have identified and that we are thinking are playing a very important role. First of all, Godo is beloved by the
+community and by young game developers. This is very interesting because if you look at the future from now on,
+considering that Godo is about 10 years old, it has been published around 2014. So, we're talking about a decade uh uh
+of maturity out in the market. The young game developers of today will be the opinion leaders of tomorrow. And that is
+exciting because we are experiencing a generational change in terms of game tech stack. If we take GMTK one of the most
+interesting global game jam data and and point of view that we have we are seeing that godo is really becoming a
+preferred technology by that target group. If we look at number of projects published in HIO, I don't have a precise
+number but that was on my home uh homework. I unfortunately I couldn't get it right but it's really compelling. So um we
+are seeing that the new generation of game developers is embracing Godo as their preferred tech stack. How big is good?
+Well, few days ago, uh, GDC as an organization published the state of the industry, which means primarily GDC, uh,
+respondent gave some feedback about the industry use of GDU. And as you can see, you have 30% unity, 30% unreal, two
+dominant technologies in this space. As we know, they are mature, older than Godo. They're pretty much connected with
+the industry. But the for the first year we have GDO appearing in the list with the 4% estimated in the industry. In
+reality if we look at again the group the target group of um indies and young developers this percentage can can be
+raised a lot. Now the good thing is that if we look at the progression of good we can estimate that this number can grow
+10x 2030. So in a relatively short period of time the generational change that I've mentioned before can happen in the
+next five to six years and we can be the drivers of this. How is good growing? Well, again some snapshots here about the
+change that just in two years we have seen 23 vers 24 versus 23. As you can see both in steam and at GMTK level there is
+a huge and compelling growth of godo preference. If we look at steam the trajectory is exponential trajectory. If if
+again we project this number at the same rate for the next five years, we will have close to um 5,000 games shipped in
+Godo. And again, if we look at the annual growth, this is really compelling. There is a lot there is a lot of room to
+grow for good which has been by design a technology started by solo developers, hobbyist in this and is now maturing in
+terms of outcomes. I will show you in a while why I mean that um there is a great retention rate. Whoever as as far as
+we can we can hear from the community whoever is moving to God is likely to stay for a long long time hopefully forever.
+This retention rate is because the technology is beloved but also the community is really supportive. Few interesting
+numbers about who uses Godo engine again very compelling. Um, Godo is steadily um, among the top 10 open source software
+projects with titans in this space. Um, the community if we look for example at Reddit and Discord is really growing
+fast and in terms of daily active users, monthly active users numbers are getting really towards the seven figures at
+monthly at monthly level. um downloads and install is really growing fast. But one thing that is very interesting is
+that GDScript is used by the 3% of developers at all scale at software scale. Now of course we want to learn from
+success stories right um we have tried to distill few examples that we feel can be compelling but before looking at that
+again a couple of numbers at market level. A couple of years ago, we had two, three games made shipped in Godo making
+more than $1 million. Taking $1 million as this kind of bar, right? Last year, we had 25 games making one more
+than $1 million. We're talking about at least 5x year-over-year. And last year compounding the revenue generation of Godo games we we have landed in the 100 million space. Again if we project this at the same rate from now to 2030 it will be a1 billion range. So why is this important? That's that's interesting because in my opinion at least the more the community growth in terms of monetization and success the more it can give back to the project the more it can strengthen and the more it can inspire as role model for young for the young generation of game developers using godo. So it's happening again. We are experiencing on top of the raise of the indie community, we are experiencing interesting examples and industry signals that there is a migration or a transition in progress. So, Godo is not just trusted by the indie community and by the hobbyist, but it's getting a trusted technology by more sophisticated game developers. You probably know Second Dinner. They did Marvel Snap, a big hit, a big success, and they are now working with us and working in Godo. Uh the same happened with with with Mega Crate, who basically is shipping Slate Aspire 2. At least they said this. uh in God. Um pistol shrimp, robbo gentleman porting a whole catalog from Unity to God. Uh these are interesting signs about the industry and the more sophisticated level of developers paving the way for a generational change and the switch in terms of rebalancing and giving open-source game engine an opportunity to be at par or at least a super viable choice for developing a compelling successful game. I want also to mention um we are lucky enough because we have also uh uh Eric here in the room uh which who who I um I I I really thank for the support. Um there are a couple of projects that we would like to highlight and and they pretty much had a a really a boost in the last 12 months thanks to a collaboration an in industry open-source collaboration happening um you know and converging towards something really magic. So God is becoming has just become a world-class citizen into a very compelling XR platform which is Metaquest. And this is exciting because um there is a strong need to provide state-of-the-art opportunity for the community to explore areas of game developments like XR which are which are niche in brackets but but uh but can express a lot of power and a lot of opportunity. We are seeing a lot of traction from the announcement that we have done and from the opportunity as we read from from one of the comments. the release of the of the of the of the uh good official SDK just happened. But we have seen um very interesting numbers for the first few weeks in terms of download in terms of time spent in the in the in the in the making and and one interesting thing that I read we were commenting just few days ago was um you can edit your game live from the meta headset. It's like editing reality. I really I really was surprised by this quote by a user. It's like editing reality. So the level of um engagement and the and the and the compelling solution towards this specific space can be huge. Another interesting example I've mentioned before but we have started a very important collaboration in the mobile capability space of godau with a big title. We are expecting this title to be the biggest title ever shipped mobile first in God with second dinner. Um they are doing an amazing job. Um they are proving and again paving the way that God not only is a desktop first or a PC first kind of game tech but it's opening up to mobile capabilities quite a lot and and it's enriching the opportunity of um attracting more and more interesting developers. Now why W4 exist? Um we think that the inflection point so the point in which good will become recognized as one of the best technologies in the market is close. The reason why we exist is accelerate the way to this inflection point. What does it mean? Well, it means trying to do three things in particular. First thing is remove roadblocks. Remove anything we can for developers to develop in godo and ship successful projects. One example is uh W4 console. We released console ports for uh the three most important platforms uh Switch, Xbox and PS5. And and basically this was again an effort to provide the commercial ports uh certified at the highest level possible. uh at one click of distance from your PC game to your console export. Um W4 is building tooling is building software packages or products on top of Godo for mainly enterprise use to remove roadblocks derisk the um use of goodo at bigger scale and help customer success. This is why we exist. Um there are a few interesting examples. We have been starting working mainly in the gaming space with great companies. Um we have been starting shipping products. Uh W4 console is shipped. W4 cloud will be shipped um in days and W uh again W4 build sorry will be shipped in days. I'll tell you more about that. And W4 cloud is um uh uh um ready for use at enterprise level. So these are the first three components coming out of our R&D because primarily good needs quite a lot of um uh you know R&D around to keep on making it compelling on the long term. Companies like W4 are here to make it happen and to try to give the best to make it happen. Um I was mentioning briefly W forbuild. We feel W for build a CDCI solution optimized for goto can provide a very interesting and compelling um add-on uh both for indis and for more uh and for bigger developers thanks to the fact that it's versatile. It's optimized for good and it can provide a lot of great features. We have got um almost a hundred developers in the early access proc in the early access phase and we are now ready to uh um uh put it live in production stage. So stay tuned if you if you are making uh uh a good game or if you want to know more about the solution stay tuned and get in touch with us for that. Um the same is for W4 console. Um um it's um available uh we have shipped uh switch and Xbox um uh we have presented launched the switch and Xbox last October during go.com in Europe. Uh play PlayStation 5 is also being shipped uh uh while we speak and and that is compelling solution. Consider that out of $
+300 billion dollars of gaming value per of business per year, the 70% of this value is is a niche called games and
+services. And the 25% of games and services is console business. So we're talking about a 50 billion plus console value
+per year. You can imagine where Godo come from. It's a fantastic story, a poem that Samuel Beckett uh an amazing author
+um from Ireland uh gave us uh in which um Vladimir and Estragon are waiting for this person to come. Well, I have a good
+news for you. We don't need to wait good because Godo is already here. It is one click away from you. You can download
+and we are here to help. Thanks a lot. We have a few minutes to go do some Q&A if people have questions. We've got mics
+here and here. You can line up and go ahead. I've got one over here. Are there roles now or potentially in the future
+that are something like developer relations roles or anything like that at GDAU? So the question is are there developer
+relations roles at GDAU? Uh right now no. I can't speak about the future uh in the near future also no but long-term
+potentially. The GDAU Foundation is a very lean and mean organization. We've got about 12 or 13 people total and almost
+all of them are engine developers. Uh and you know because our our funding is quite limited. It's all donation based. Um
+almost everything just goes into more more developers. But as as funding increases and as the ecosystem changes that
+that may change in the future. I'll take one from over here. Uh, so as somebody who actually does work with virtual
+reality and has for a long time been using Unreal Engine, especially as a student in virtual reality at Wringling
+College of Art and Design, something that I'm curious about is because I did see the update for the release of the GDAU
+XR tools. I'm wondering where do where does GDAU where does the GDAU team see the future of game development or
+development uh using XR and VR tools especially as the engine continues to update and improve? So the question is where
+does the GDO team see the development of XR tools especially as GDAU becomes uh more advanced on those platforms. Now,
+uh, uh, we have a lead XR developer and I don't want to speak for him, uh, because I will say something that he
+disagrees with, I'm sure. Um, so I'll speak for myself in this, and I think I highlighted pretty strongly that I think
+tight tight feedback loops and I think rapid iteration are incredibly powerful tools that GDAU offers. And I think
+that's one of the the driving forces behind the XR editor, right? If you can edit your game, you can test your game, and
+you can do that without taking your headset off, uh, and ideally do that in a a comfortable place and have the absolute
+tightest feedback loop. I think that's where we're going to see the most value. So, I would love to see development move
+towards that. But, um, you know, I'll I'll be cautious in in what I say. I won't say that's where the team sees it sees
+it going, but that's something that I personally am quite excited about and would love love to see. I'll take another
+one over here on the right. Hey, great talk by the way. Thank you. Um, I have just one little question. Uh, earlier in
+the technical presentation, you mentioned something about C's caveats. And now I've heard something some something's
+around that um online, but if you could shed some light on what that might entail from the GDAU team's eyes or what what
+you guys have in mind, what do you want to fix? Um how do you view that um particular point? Thank you. Right. So the
+the question is I mentioned that there are caveats to to using C# and some pain points and so so what are those and what
+what's our plan for that? Um so uh I'm I'm a rendering developer and not a a C developer. So my my knowledge is a bit
+general but really right now the problem with C is the it lacks the tight engine integration that we have with GDScript
+right GDScript is uh built for and with with the engine in mind uh whereas C has a lot of different tools that don't
+necessarily mesh with the the similar tools that we expose through GDOS which means that at best you have a translation
+layer at worst you have uh tools in C that just don't really work with with GDO stuff. So the long-term plan actually
+for C uh is to 1000 offer it as a GD extension. Um and GD 1001 extension has a integration system 1002 that's really
+really nice, really really 1003 tight uh and at this point is would 1004 allow C to be more tightly integrated 1005 with
+the engine. But also what we're 1006 seeing now is a lot of the growth of 1007 GDScript is informed by by choices made
+1008 for for C. You know more of a feature 1009 parody which means that more things in 1010 the engine are going to work
+work 1011 tighter with C. I won't speak for the C 1012 team because they have lots of plans and 1013 uh I want to be
+cautious not to step on 1014 their toes, but uh you can expect to see 1015 a lot of developments in that area. Take 1016
+another one on the left. Uh yeah. Um, 1017 you're never going to believe this, but 1018 that was quite literally the
+exact 1019 question I was going to ask. Um, great 1020 response. Love the um, presentation. 1021 Okay, thank you very
+much. Maybe we'll 1022 do another one on the left then. Yeah. 1023 Hey, so I have a couple of questions. 1024 One is
+about WebGPU and the other one is 1025 machine learning. So just for some 1026 context, we are an independent tools and
+1027 research studio and we are building a 1028 content and behavior generation 1029 framework. Our plan was to use
+Unity and 1030 then WebGPU. Our target platforms are 1031 PC, VR, uh and then web but lightweight 1032 uh indeed to AA
+kind of games. Uh but we 1033 are considering switching the entire 1034 thing to go. So the question was uh you 1035
+mentioned web uh do you have any plans 1036 for web GPU and second question just 1037 we'll take take one at a time.
+Sure. Um 1038 the question is do we have any plans for 1039 web GPU and yes y um web GPU is the the 1040 future of GPU
+uh APIs on the web and 1041 we'll we'll support it eventually for 1042 sure. Any rough estimates 1043 if at all like by
+when sorry can you 1044 repeat the question? No, by when do you 1045 have any rough estimates? Time 1046 estimates. Um
+the question is is there 1047 any time estimates? No, it'll be ready 1048 when it's ready. Okay. And the second 1049
+question was about machine learning 1050 especially because it supports Python 1051 and the machine learning ecosystem
+is 1052 almost like heavily Python. Do you have 1053 any plans of utilizing that? Uh yeah I 1054 think I actually
+mentioned in in the 1055 talk so the question is do we have plans 1056 to implement Python? Uh you can use 1057 Python
+with GDO through a GD extension. 1058 My question was specific to machine 1059 learning. Can can you use Python for 1060
+machine learning in GDO? Is that the 1061 question? Yes. Through an extension. 1062 Yes. Okay. Yeah. Thank you. All
+right. 1063 Thank you. Uh I'll take another question 1064 on the right. Hi. Um first of all, I 1065 just want to say and
+congratulate your 1066 team on completing 4.4. I'm sure that 1067 was intentional right before GDC. It's 1068 amazing.
+It's one of your best updates 1069 in my opinion. Um I'm very happy with 1070 everything that's on there. It's blowing
+1071 my mind what you guys do. But anyways, 1072 my question for you is more of an 1073 open-ended one. I'm very
+curious. 1074 Uh, is there anything that you're 1075 excited for for the future of GDAU as 1076 far as possible things
+4.4 and beyond? 1077 The question is, is there anything that 1078 I'm excited for in 4.4 and beyond? Uh, 1079
+absolutely. Um, you know, as a technical 1080 engineering person, I'm most excited 1081 about the things that I'm
+working on 1082 right now. Uh, which are a whole host of 1083 performance improvements. Uh, and I'm 1084 I'm not the
+only person. And there there 1085 are a few of us that are working quite 1086 hard on improving performance right now.
+1087 So for me that's the most exciting thing 1088 and luckily a lot of that's going to 1089 come in 4.5 which is the
+next release uh 1090 which we hope to release this this 1091 summer. Uh but there are so many things 1092 we have
+planned on the website. We have 1093 a what we call the GDAU priorities page 1094 which is really just a collection of
+1095 things that uh contributors are excited 1096 about. So I would I would go there take 1097 a read through. uh we we
+lay out all all 1098 our ideas and and information about them 1099 um and and check it out. But for me, 1100 it's
+performance. I love I love 1101 performance. Gotcha. Thank you. Right. 1102 Thank you. On the left here. Hello. I'm 1103
+an indie dev and I currently use Unity, 1104 but I'm strongly considering moving over 1105 to GDO. And um you know, I
+I'm a big fan 1106 of open source. I use Blender for 1107 basically everything 3D modeling. And I 1108 was wondering
+like I went to their 1109 conference uh last October and you know, 1110 their metrics of adoption are very 1111 similar.
+I mean their core values and 1112 what they talk about it's very similar 1113 and I was just wondering if there's like
+1114 you know I I don't know because I don't 1115 currently use GDAU but what's the 1116 symbiosis there because it's B
+you you 1117 guys are doing like the same thing just 1118 different ideas game engine and you know 1119 3D modeling tool
+is there any like do 1120 you work with Blender Foundation at all 1121 etc. Yes. So the question is what's the 1122
+symbiosis between uh the GDO project and 1123 the blender project? Uh we're very 1124 close. Yeah. Like lot of
+friendships 1125 across across projects, a lot of 1126 communication across projects. I mean 1127 the fact that we uh we
+formed the GDAU 1128 Foundation in the Netherlands was no 1129 coincidence. Blender Foundation is is in 1130 the
+Netherlands and we wanted to be 1131 close to them. Um but there's there's a 1132 lot of communication across teams and
+in 1133 fact Blender Studios next project 1134 project dogwalk is a game made made in 1135 GDAU. Awesome. Um so lot of
+symbiosis 1136 there and uh we really try to follow in 1137 their footsteps and and they've been 1138 gracious enough to
+help us along the 1139 way. Awesome. Thank you. Thank you. 1140 Another one on the right and I think we 1141 have time
+for maybe one or two more. Uh 1142 hi. I'm a game designer. Um and I've 1143 been working with GDO for a few years 1144
+now. Um, and I'm just wondering if you 1145 guys have any plans to have like uh ways 1146 to connect design like
+developers and 1147 studios that are looking for GDAU devs. 1148 It's with the relatively like new 1149 adoption of it.
+Yeah, that's a great 1150 question. So, the question is, do do we 1151 as a project have plans to connect 1152
+developers and studios looking for 1153 developers? Yeah. Uh actually we're 1154 we're working on I think we have a 1155
+pretty good um draft idea and we're 1156 we're planning on making a a job board 1157 that would both be be useful for
+people 1158 looking for for work, people looking to 1159 hire people, but then also for people 1160 that are offering
+products and services 1161 in the ecosystem in order to um to get 1162 the word out, you know. So that way if 1163
+you're looking to pay somebody to fix a 1164 bug that's just not getting fixed by the 1165 community, you'd be able to
+find 1166 somebody to do that. Or if you're 1167 looking for for a job, you'd be able to 1168 find job postings there,
+too. So it's 1169 it's something on our radar, but uh 1170 after the asset store. Got it. Awesome. 1171 That's great to
+hear. Thank you. Thank 1172 you. Uh on the left, hi. Hey, I run the 1173 Seattle Blender user group and I really 1174
+liked your slide about how GDAU is 1175 having its Blender moment because about 1176 two years ago I felt that same way
+and I 1177 started a Seattle uh GDAU group. Um I I 1178 got two things. First, um I'm a big 1179 believer in community
+and finding your 1180 local people. So, can everyone say the 1181 city they're from? 1182 San Diego. Seattle. 1183 All
+right. Well, hopefully you heard 1184 somebody say the same city. So get 1185 together. Uh and then second off um how
+1186 do we get our group on the website for 1187 user groups? Uh you can Oh, so the 1188 question is how do we get uh a
+user 1189 group onto the website? Uh 1190 contactdogen.org. 1191 Okay. Yeah, but they they haven't gotten 1192 back.
+Okay. Send send another email. 1193 I'll make sure someone gets back. Okay. 1194 Thanks. If you're in Seattle, come
+talk. 1195 I think we're out of time, everybody. So 1196 thank you very much for the questions. 1197 Please remember to
+fill out the survey 1198 at the end of the 1199 [Music]
