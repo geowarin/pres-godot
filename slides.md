@@ -181,7 +181,7 @@ Notes:
 
 # Adoption and momentum
 
-- Unity's controversial pricing changes in 2023
+- Unity's [controversial pricing changes](https://gamefromscratch.com/unity-announce-new-pricing-and-plan-changes/) in 2023 (since then canceled)
 - Now appearing in industry surveys; projected significant growth this decade.
 - Revenue traction: >$1M Godot games growing; cumulative revenues nearing $100M with strong YoY growth.
 - Signals of industry trust: established studios [migrating projects](https://gamefromscratch.com/developer-experiences-moving-to-godot-from-unity/) and catalogs to Godot.
