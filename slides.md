@@ -117,7 +117,7 @@ Rapid iteration time
 
 - Transparency: inspect [source](https://github.com/godotengine/godot), understand internals, learn from it
 - Control: fix bugs, fork, or extend without waiting
-- Community: [contributions](https://docs.godotengine.org/en/stable/contributing/index.html), add‑ons, and peer support
+- Community: [proposals](https://github.com/godotengine/godot-proposals/), [contributions](https://docs.godotengine.org/en/stable/contributing/index.html), add‑ons, and peer support
 - Longevity: projects aren’t tied to a vendor’s business model
 - Licensing clarity: permissive [MIT license](https://godotengine.org/license), no royalties
 - [Godot foundation](https://godot.foundation/)
@@ -132,7 +132,7 @@ Previously associated with Software Freedom Conservancy (SFC)
 
 - [Strong guidelines](https://docs.godotengine.org/en/stable/contributing/development/best_practices_for_engine_contributors.html) allowing thousands of contributors
 - [Addons](https://godotengine.org/asset-library/asset) extend the engine with new features (gdscript, C#)
-- Engine is modular (can be compiled without 3D for example)
+- Engine is [modular](https://docs.godotengine.org/en/stable/contributing/development/compiling/optimizing_for_size.html#disabling-unwanted-modules) (can be compiled without 3D for example)
 - [GDExtension](https://docs.godotengine.org/en/stable/tutorials/scripting/gdextension/what_is_gdextension.html) allows writing C/C++ modules without engine forks
     - Terrain support
     - Language
