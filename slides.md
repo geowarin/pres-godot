@@ -39,7 +39,38 @@ The friendly open‑source game engine
 
 ---
 
+<SlidevVideo autoplay controls>
+  <source src="/godot-showcase.webm" type="video/webm" />
+  <p>
+    Your browser does not support videos. You may download it
+    <a href="/myMovie.mp4">here</a>.
+  </p>
+</SlidevVideo>
+
+---
+
 <Toc text-sm minDepth="1" maxDepth="2" />
+
+---
+
+# About me
+
+In love with godot and game development. 😍
+
+- 4 bug reports leading to fixes
+- 7 PR merged
+- 3 implemented proposals
+
+I've been developing (bad) games for 20 years.
+
+<div class="flex justify-center gap-4 h-50 mt-4">
+    <img src="/me/GF.png" class="w-25%" />
+    <img src="/me/dark-basic.png" />
+    <img src="/me/as3.png" />
+    <img src="/me/phaser.png" />
+</div>
+
+https://geowarin.itch.io
 
 ---
 
@@ -59,45 +90,50 @@ The friendly open‑source game engine
   <img src="https://godotengine.org/assets/press/logo_large_color_dark.png" alt="Godot editor screenshot" class="h-40 object-cover rounded" />
 </div>
 
+<!--
+Jolt: Horizon Forbidden West
+-->
+
 ---
 
 # Godot unfair advantages
 
 - Very light: 120Mbc
     - Unreal: 35Gb
-    - Unity: 10Gb + Launcher + mandatory account
+    - [Unity](https://youtu.be/5Sw2WcRqk2Y): 10Gb + Launcher + mandatory account
 - Free forever
 - Open source
 - Modular & well architected
 - Intuitive scene system
+- Hot reloading and integrated debugger
+
+<!--
+Rapid iteration time
+-->
 
 ---
 
 # Free & Open Source
 
-- Transparency: inspect source, understand internals, learn from it
+- Transparency: inspect [source](https://github.com/godotengine/godot), understand internals, learn from it
 - Control: fix bugs, fork, or extend without waiting
-- Community: contributions, add‑ons, and peer support
+- Community: [contributions](https://docs.godotengine.org/en/stable/contributing/index.html), add‑ons, and peer support
 - Longevity: projects aren’t tied to a vendor’s business model
-- Licensing clarity: permissive MIT license, no royalties
+- Licensing clarity: permissive [MIT license](https://godotengine.org/license), no royalties
+- [Godot foundation](https://godot.foundation/)
 
-Learn more:
+<!--
+Previously associated with Software Freedom Conservancy (SFC)
+-->
 
-- License: https://godotengine.org/license
-- Source code: https://github.com/godotengine/godot
-- Contributing: https://docs.godotengine.org/en/stable/contributing/index.html
-
----
-layout: iframe-right
-url: https://docs.godotengine.org/en/stable/contributing/development/best_practices_for_engine_contributors.html
 ---
 
 # Modular & Well Architected
 
-- Addons extend the engine with new features (gdscript, C#)
+- [Strong guidelines](https://docs.godotengine.org/en/stable/contributing/development/best_practices_for_engine_contributors.html) allowing thousands of contributors
+- [Addons](https://godotengine.org/asset-library/asset) extend the engine with new features (gdscript, C#)
 - Engine is modular (can be compiled without 3D for example)
-- [GDExtension](https://docs.godotengine.org/en/stable/tutorials/scripting/gdextension/what_is_gdextension.html) allows
-  writing C/C++ modules without engine forks
+- [GDExtension](https://docs.godotengine.org/en/stable/tutorials/scripting/gdextension/what_is_gdextension.html) allows writing C/C++ modules without engine forks
     - Terrain support
     - Language
       bindings ([D](https://github.com/godot-dlang/godot-dlang), [Go](https://github.com/grow-graphics/gd), [Nim](https://github.com/godot-nim/gdext-nim), [Rust](https://github.com/godot-rust/gdext), [Swift](https://github.com/migueldeicaza/SwiftGodot), [Odin](https://github.com/dresswithpockets/odin-godot),
@@ -114,13 +150,8 @@ url: https://docs.godotengine.org/en/stable/contributing/development/best_practi
 
 - Games are built from scenes composed of nodes arranged in a tree.
 - Each node provides a focused responsibility (e.g., Sprite2D, Area3D, AnimationPlayer).
-- Inheritance by composition: reuse via instancing scenes as children of others.
-- Signals enable decoupled communication between nodes (event-driven).
-- Editing workflow: drag-and-drop nodes, set properties, connect signals, and instance scenes.
-- Benefits:
-    - Modular, maintainable architecture
-    - Easy reuse and composition
-    - Clear separation of concerns
+- Focus on composition: reuse via instancing scenes as children of others.
+- Signals decouple communication between nodes (event-driven).
 
 ---
 layout: image-right
@@ -129,15 +160,15 @@ image: /PRs.png
 
 # Godot popularity — by the numbers
 
-- 100,000+ GitHub stars milestone reached [[1]](https://godotengine.org/article/beyond-100000-you-re-breathtaking/)
+- 100,000+ GitHub stars milestone reached (71 most starred on GH) [[1]](https://godotengine.org/article/beyond-100000-you-re-breathtaking/)
 - 2,800+ code contributors over the project’s lifetime [[2]](https://github.com/godotengine/godot/issues/100000)
 - Approx. 600 new pull requests and 600 new issues per month (sustained
   pace) [[1]](https://godotengine.org/article/beyond-100000-you-re-breathtaking/)
 
 <div class="mt-6 inline-flex flex-col gap-4 grow-0">
-  <img src="https://img.shields.io/github/stars/godotengine/godot?style=social" alt="GitHub stars badge" class="h-8" />
-  <img src="https://img.shields.io/github/contributors/godotengine/godot" alt="Contributors badge" class="h-8" />
-  <img src="https://img.shields.io/github/issues-pr-closed/godotengine/godot?label=PRs%20closed" alt="Closed PRs badge" class="h-8" />
+  <img src="https://img.shields.io/github/stars/godotengine/godot?style=social" alt="GitHub stars badge" />
+  <img src="https://img.shields.io/github/contributors/godotengine/godot" alt="Contributors badge" />
+  <img src="https://img.shields.io/github/issues-pr-closed/godotengine/godot?label=PRs%20closed" alt="Closed PRs badge" />
 </div>
 
 <!--
@@ -150,199 +181,41 @@ Notes:
 
 # Adoption and momentum
 
-- Rapid growth over the last few years (e.g., strong increase in Steam releases; high community traction among indie and
-  young developers).
-- Now appearing in industry surveys; projected significant growth this decade.
-- Revenue traction: rising number of Godot games exceeding $1M; cumulative revenues moving toward the nine‑figure range
-  with strong year‑over‑year growth.
-- Signals of industry trust: established studios migrating projects and catalogs to Godot.
-
-References:
-
-- Engine overview: https://godotengine.org
-- Roadmap: https://godotengine.org/roadmap
-- Showcase: https://godotengine.org/showcase
-
----
-layout: image
-image: /growth.png
----
-
----
-
-# Unity debacle
-
 - Unity's controversial pricing changes in 2023
-- Godot's accessibility and zero-cost model
-- Growing community of developers migrating from Unity
-- Comparable feature set for most game development needs
-- No "runtime fee" or revenue sharing
+- Now appearing in industry surveys; projected significant growth this decade.
+- Revenue traction: >$1M Godot games growing; cumulative revenues nearing $100M with strong YoY growth.
+- Signals of industry trust: established studios [migrating projects](https://gamefromscratch.com/developer-experiences-moving-to-godot-from-unity/) and catalogs to Godot.
+- Influencers:
+    - [Brackeys](https://www.youtube/@Brackeys)
+    - [Passivestar](https://bsky.app/profile/passivestar.bsky.social)
+    - [Acerola](https://www.youtube/@Acerola_t)
+    - [Kenney](https://kenney.nl/)
 
 ---
 
-# Godot adoption: Game jams
+# Growth
 
 <div class="mt-6 flex gap-4 grow-0">
-    <img src="/gmtk/2025.png" class="w-1/2 h-100%" />
-    <div class="flex flex-col gap-4 overflow-auto w-1/2 max-h-[30vh]">
-        <img src="/gmtk/2021.png" />
-        <img src="/gmtk/2022.png" />
-        <img src="/gmtk/2023.png" />
-        <img src="/gmtk/2024.png" />
-    </div>
-</div>
 
----
-
-# Godot adoption: Influencers
-
-<div class="flex flex-col gap-4 float-right w-50%">
-  <img src="/influencers/brackeys.png" />
-  <img src="/influencers/acerola.png" />
-</div>
-
-- [Brackeys](https://www.youtube.com/@Brackeys)
-- [Passivestar](https://bsky.app/profile/passivestar.bsky.social)
-- [Acerola](https://www.youtube.com/@Acerola_t)
-- [Kenney](https://kenney.nl/)
-
-https://passivestar.xyz/posts/is-it-time-to-use-godot/
-
----
-
-# Godot adoption: indie studios
-
-- [Mega crit](https://www.pcgamer.com/games/card-games/slay-the-spire-2-ditched-unity-for-open-source-engine-godot-after-2-years-of-development/) (
-  Slay the Spire)
-- [Road to Vostok](https://www.nme.com/news/road-to-vostok-is-moving-away-from-unity-3506735)
-- [Robot Gentlemen](https://robotgentleman.com/)
-- [Frog Collective](https://frog-collective.com/)
-
-https://gamefromscratch.com/developer-experiences-moving-to-godot-from-unity/
-
----
-layout: iframe-right
-url: https://bsky.app/profile/wethrowswitches.bsky.social/post/3lx7orjamss2i
----
-
-# Godot adoption: Commercial successes
-
-- Brotato - top-selling roguelike
-- Cassette Beasts - monster-collecting RPG
-- Cruelty Squad - cult hit FPS
-- The Case of the Golden Idol - Investigation game
-- Halls of Torment - Survivor roguelite
-
-https://godotengine.org/showcase/
-
----
-
-# Why developers prefer Godot
-
-- Usability and rapid iteration: integrated debugger, hot‑editing via remote scene tree, very fast run/test cycles.
-- Freedom and ownership: open license, no vendor lock‑in, modify the engine as needed; ability to upstream changes to
-  reduce long‑term maintenance.
-- Cost control: no licensing fees; pay only for optional services (support, ports, tooling) from multiple competing
-  providers.
-
-Resources:
-
-- Getting started: https://docs.godotengine.org/en/stable/getting_started/index.html
-- Tutorials: https://docs.godotengine.org/en/stable/tutorials/index.html
-- Asset Library: https://godotengine.org/asset-library
-
----
-
-# The Godot Foundation
-
-- Independent non‑profit stewarding the Godot Engine and its ecosystem
-- Facilitates governance and roadmap; maintains infrastructure and releases
-- Manages the Godot Development Fund and sponsorships to finance core development
-- Supports maintainers, grants/bounties, community initiatives, and events
-- Handles trademarks and legal matters; promotes openness and transparency
-
-Links:
-
-- About/Governance: https://godotengine.org/about
-- Development Fund: https://fund.godotengine.org
-
---- 
-
-# The 4.0 revolution
-
-https://godotengine.org/article/godot-4-0-sets-sail/
-
-https://godotengine.org/article/godot-4-1-is-here/
-
-https://godotengine.org/article/godot-4-2-arrives-in-style/
-
-https://godotengine.org/releases/4.3/
-
-https://godotengine.org/releases/4.4/
-
----
-
-# Jolt Physics
-
-- Modern, multi‑core rigid‑body physics engine (MIT‑licensed)
-- Proven in AAA titles such as Horizon Forbidden West and others
-- Benefits for devs: high performance, robust constraints, CCD, stable character controllers
-- In Godot: built-in since 4.4, previously as a plugin
-
-Refs: Horizon Forbidden West and Jolt
-overview [[1]](https://www.guerrilla-games.com/read/architecting-jolt-physics-for-horizon-forbidden-west),
-Projects using Jolt [[2]](https://jrouwe.github.io/JoltPhysics/md__docs_2_projects_using_jolt.html)
-
-<div class="mt-6 flex items-center justify-center">
-  <img src="https://upload.wikimedia.org/wikipedia/en/6/69/Horizon_Forbidden_West_cover_art.jpg" alt="Horizon Forbidden West cover art" class="h-72 rounded shadow" />
-</div>
-
----
-
-# Ecosystem at a glance
-
-- Asset Library: free assets, shaders, tools
-- Export templates: desktop, mobile, web; consoles via partners
-- GDExtension: write high‑performance C++ modules without engine forks
-- Community hubs: Q&A, forums, Discords, and regional groups
-
-Links:
-
-- Asset Library: https://godotengine.org/asset-library
-- GDExtension: https://docs.godotengine.org/en/stable/tutorials/scripting/gdextension/index.html
-- Q&A: https://godotengine.org/qa
-
----
-
-# GDScript at a glance
-
-- Purpose‑built, Python‑like language designed for Godot’s node/scene model
-- Optional static typing for better tooling and performance
-- Tight engine integration: signals, coroutines (await), resources, editor hints
-- Fast iteration: hot‑reload, live inspector, autocompletion
-- When to pick others: C# for ecosystem/libraries; GDExtension (C/C++) for hotspots
-
-Quick taste:
-
-```gdscript example.gd
-extends Node
-
-var speed: float = 200.0
-
-func _process(delta: float) -> void:
-    position.x += speed * delta
+<div class="flex flex-col">
+```mermaid {theme: 'dark', scale: 0.5}
+xychart-beta
+    title "Game released every year using Godot (SteamDB)"
+    x-axis [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
+    y-axis Games
+    bar [8, 12, 34, 55, 105, 181, 316, 376, 763]
 ```
 
-Learn more:
+Godot is the fastest growing game engine by far with a YoY growth of 100%.
+</div>
 
-- GDScript basics: https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/index.html
-- Static typing: https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/static_typing.html
-- Signals: https://docs.godotengine.org/en/stable/tutorials/scripting/signals.html
-- Coroutines (await): https://docs.godotengine.org/en/stable/tutorials/scripting/coroutines.html
+<img src="/gmtk/2025.png" class="w-1/2 h-100%" />
+
+</div>
 
 ---
 
-# Demo: Creating a bouncing ball
+# Demo: Bouncing balls!
 
 - Floor is a [CSGShape3D](https://docs.godotengine.org/en/stable/tutorials/3d/csg_tools.html)
 
@@ -357,7 +230,7 @@ Learn more:
 
 ---
 
-# Demo: customize the ball color
+## Customize the ball color
 
 ```gdscript
 extends RigidBody3D
@@ -373,7 +246,7 @@ func _ready() -> void:
 
 ---
 
-# Demo: edit color in the editor
+## Edit color in the editor
 
 - add `@tool` to the script
 - create a setter
@@ -392,7 +265,7 @@ extends RigidBody3D
 
 ---
 
-# Demo: add a button to create balls
+## Add a button to create balls
 
 ```gdscript
 @tool
@@ -411,7 +284,7 @@ func add_ball():
 
 ---
 
-# Demo: Inspect the godot editor with godot!
+## Inspect the godot editor with godot!
 
 <kbd>Debug</kbd> > <kbd>Customize run instances</kbd>
 
@@ -421,29 +294,20 @@ Main run args:
 --path ../demo --editor
 ```
 
-![Editor debugging editor](/demo/editor_debug.png)
+<div class="flex justify-center">
+    <img src="/demo/editor_debug.png" class="h-80" />
+</div>
 
 ---
 
 # Future
 
-- 4.5 release
-    - shader baker
-    - SDL 3 gamepad support
-    - Embedded preview enhancements (Mute, multi-selection, macos support)
-    - Screen reader support
-    - Abstract classes
-      https://godotengine.github.io/godot-interactive-changelog/#4.5
+- 4.5 release (currently RC1)
+- Each release introduces a massive amount of features (ex: [4.4 changelog](https://godotengine.org/releases/4.4/))
+- [New asset store](https://store-beta.godotengine.org/)
+- [Priorities](https://godotengine.org/priorities/)
 
-Store:
-https://store-beta.godotengine.org/
-
-
---- 
-
-# Roadmap
-
-https://godotengine.org/priorities/
+[Is it time to use Godot?](https://passivestar.xyz/posts/is-it-time-to-use-godot/)
 
 ---
 
@@ -451,10 +315,8 @@ https://godotengine.org/priorities/
 
 - Website: https://godotengine.org
 - Documentation: https://docs.godotengine.org
-- Roadmap: https://godotengine.org/roadmap
+- Priorities: https://godotengine.org/priorities/
 - Showcase: https://godotengine.org/showcase
-- Source: https://github.com/godotengine/godot
-- License (MIT): https://godotengine.org/license
 - Asset Library: https://godotengine.org/asset-library
 - Learn (Tutorials): https://docs.godotengine.org/en/stable/getting_started/step_by_step/index.html
 
