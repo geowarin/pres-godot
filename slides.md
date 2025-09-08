@@ -98,7 +98,7 @@ Jolt: Horizon Forbidden West
 
 # Godot unfair advantages
 
-- Very light: 120Mbc
+- Very light: 120Mb
     - Unreal: 35Gb
     - [Unity](https://youtu.be/5Sw2WcRqk2Y): 10Gb + Launcher + mandatory account
 - Free forever
